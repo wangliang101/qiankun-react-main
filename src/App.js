@@ -21,16 +21,19 @@ start();
 
 function App() {
   const [activeId, setActiveId] = useState(1);
-  console.log('lll', process.env)
-
+  
+  const handleClick = (id) => {
+    window.history.pushState(null, null, id === 1 ? '/react' : '/vue')
+    setActiveId(id)
+  }
   // 修改默认布局，增加子应用挂在容器“＃container”
   return (
     <div className="app">
       <header className="app_header"></header>
       <div className="app_body">
         <aside className="menu">
-          <div className={`menu_button ${activeId === 1 && 'active'}`} onClick={() => setActiveId(1)}>react-sub</div>
-          <div className={`menu_button ${activeId === 2 && 'active'}`} onClick={() => setActiveId(2)}>vue-sub</div>
+          <div className={`menu_button ${activeId === 1 && 'active'}`} onClick={() => handleClick(1)}>react-sub</div>
+          <div className={`menu_button ${activeId === 2 && 'active'}`} onClick={() => handleClick(2)}>vue-sub</div>
         </aside>
         <div id="container" className="content"></div>
       </div>
