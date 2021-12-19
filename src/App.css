@@ -7,6 +7,13 @@
 .app_header{
   height: 60px;
   background-color:tan;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.app_header button{
+  margin-left: 20px;
 }
 
 .app_body{
