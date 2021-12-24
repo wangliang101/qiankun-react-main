@@ -1,0 +1,7 @@
+version: '2.3'
+services:
+  react-mian:
+    image: wangliang4468/qiankun:react-main-1.0.0
+    restart: always
+    ports:
+      - 4000:80
