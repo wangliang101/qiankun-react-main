@@ -16,6 +16,7 @@ actions.onGlobalStateChange((state, prev) => {
 // actions.setGlobalState(state);
 // actions.offGlobalStateChange();
 
+// 获取全局状态
 actions.getGlobalState = (key) => {
    return initState[key] ?  initState[key] : initState
 }
